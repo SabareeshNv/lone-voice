@@ -1,0 +1,62 @@
+---
+const nav = [
+  { text: "Home", link: "/" },
+  { text: "Blog", link: "/blog" },
+  { text: "About", link: "/about" },
+  { text: "Contact", link: "/contact" },
+];
+---
+
+<header class="py-4 shadow-md">
+  <div class="wrapper flex flex-wrap justify-between items-center">
+    <a href="/" class="text-xl md:text-3xl font-serif font-bold"
+      >The Lone Voice</a
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      width="24"
+      height="24"
+      id="toggle"
+      class="w-6 h-6 md:hidden cursor-pointer hover:outline focus:outline"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+
+    <nav id="nav" class="hidden md:flex w-full md:w-auto">
+      <ul class="flex flex-col pt-4 md:pt-0 md:flex-row">
+        {
+          nav.map((item) => (
+            <li class="py-3 md:py-0 md:px-6">
+              <a
+                href={item.link}
+                class="block text-lg xl:text-xl hover:text-brand-red"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // To open and close the hamburger menu
+  const toggle = document.getElementById("toggle");
+  const nav = document.getElementById("nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("hidden");
+    });
+  }
+</script>

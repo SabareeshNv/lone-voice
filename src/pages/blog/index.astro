@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+// import TagCloud from "@components/TagCloud.astro";
+
+import { getCollection } from "astro:content";
+import { filterPosts } from "@utils/helpers";
+
+const allPosts = await getCollection("blog");
+const filteredPosts = filterPosts(allPosts);
+
+const title = "Blog | The Lone Voice";
+const description = "Thoughts from my chaotic mind!";
+---
+
+<BaseLayout {title} {description}>
+  <main class="wrapper py-6">
+    <div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="sm:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-2 lg:gap-6">
+        {filteredPosts.map((post) => <Card {post} />)}
+      </div>
+    </div>
+  </main>
+</BaseLayout>

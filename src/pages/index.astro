@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import FirstCard from "@components/FirstCard.astro";
+import Card from "@components/Card.astro";
+
+import { getCollection } from "astro:content";
+import { filterPosts } from "@utils/helpers";
+
+const allPosts = await getCollection("blog");
+const filteredPosts = filterPosts(allPosts);
+
+const title = "The Love Voice";
+const description = "Welcome to my humble blog";
+---
+
+<BaseLayout {title} {description}>
+  <main class="wrapper py-6">
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="md:col-span-3">
+        {filteredPosts.slice(0, 1).map((post) => <FirstCard {post} />)}
+        <div class="mt-10 md:mt-12 lg:mt-16 grid lg:grid-cols-2 gap-6">
+          {filteredPosts.slice(1).map((post) => <Card {post} />)}
+        </div>
+      </div>
+      <div>Sidebar</div>
+    </div>
+  </main>
+</BaseLayout>

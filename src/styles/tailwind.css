@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply max-w-[1300px] w-[90%] md:w-[95%] mx-auto;
+  }
+
+  .wrapper-small {
+    @apply max-w-[1000px] w-[90%] md:w-[95%] mx-auto;
+  }
+
+  .typography {
+    @apply prose prose-lg md:prose-xl xl:prose-2xl prose-stone prose-headings:font-serif prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
+  }
+
+  .typography :is(ol, ul) {
+    @apply list-outside pl-[revert] marker:text-[#44403c];
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.hero-image,
+.hero-head {
+  grid-row: 1 / -1;
+}
+
+.hero-head {
+  grid-column: 1 / 6;
+  z-index: 10;
+  align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+  .hero-head {
+    color: white;
+  }
+}
+
+.hero-image {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    filter: brightness(0.7);
+    aspect-ratio: 16 / 9;
+  }
+}
