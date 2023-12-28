@@ -1,6 +1,6 @@
 ---
-import ResponsiveImage from "./ResponsiveImage.astro";
 import Date from "./Date.astro";
+import { Picture } from "astro:assets";
 
 const { post } = Astro.props;
 const { title, pubDate, summary, coverImage, coverAlt } = post.data;
@@ -8,11 +8,13 @@ const { title, pubDate, summary, coverImage, coverAlt } = post.data;
 
 <article class="mb-6">
   <a href={`/blog/${post.slug}/`}>
-    <ResponsiveImage
+    <Picture
       src={coverImage}
       alt={coverAlt}
-      sizes={[400, 600, 800]}
-      class="bg-gray-200 shadow rounded object-cover w-full mb-4 lg:h-[18rem]"
+      widths={[300, 600, 900, coverImage.width]}
+      sizes={`(max-width: 360px) 300px, (max-width: 720px) 600px, (max-width: 1600px) 900px, ${coverImage.width}px`}
+      formats={["avif", "webp"]}
+      class="bg-gray-200 shadow rounded object-cover w-full mb-4 lg:h-[20rem]"
     />
   </a>
 
