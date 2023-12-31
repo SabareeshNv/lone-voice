@@ -10,6 +10,9 @@ module.exports = {
         sans: ["Alegreya Sans", ...defaultTheme.fontFamily.sans],
         serif: ["Alegreya", ...defaultTheme.fontFamily.serif],
       },
+      screens: {
+        sideby: "1100px",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

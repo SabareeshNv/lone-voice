@@ -12,11 +12,23 @@
   }
 
   .typography {
-    @apply prose prose-lg md:prose-xl prose-stone prose-headings:font-serif prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose prose-lg md:prose-xl xl:prose-2xl prose-stone prose-headings:font-serif prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
   }
 
   .typography :is(ol, ul) {
     @apply list-outside pl-[revert] marker:text-[#44403c];
+  }
+
+  .responsive-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 769px) {
+    .responsive-grid {
+      grid-template-columns: 2.5fr 1fr;
+    }
   }
 }
 
