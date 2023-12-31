@@ -11,10 +11,10 @@ const { title, pubDate, summary, coverImage, coverAlt } = post.data;
     <Picture
       src={coverImage}
       alt={coverAlt}
-      widths={[300, 600, 900, coverImage.width]}
-      sizes={`(max-width: 360px) 300px, (max-width: 720px) 600px, (max-width: 1600px) 900px, ${coverImage.width}px`}
+      widths={[350, 500, 750]}
+      sizes={`(max-width: 640px) 350px, (max-width: 768px) 500px, (min-width: 769px) 750px`}
       formats={["avif", "webp"]}
-      class="bg-gray-200 shadow rounded object-cover w-full mb-4 lg:h-[20rem]"
+      class="bg-gray-300 shadow rounded object-cover w-full mb-4 lg:h-[20rem]"
     />
   </a>
 

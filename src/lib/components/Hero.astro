@@ -1,6 +1,6 @@
 ---
 import Date from "@components/Date.astro";
-import ResponsiveImage from "@components/ResponsiveImage.astro";
+import { Image } from "astro:assets";
 
 const { title, pubDate, coverImage, coverAlt } = Astro.props;
 ---
@@ -14,13 +14,14 @@ const { title, pubDate, coverImage, coverAlt } = Astro.props;
       {title}
     </h1>
   </div>
-  <ResponsiveImage
+  <Image
     src={coverImage}
     alt={coverAlt}
-    sizes={[650, 750, 1000, 1300, 1500]}
-    loading="eager"
+    widths={[640, 768, 1024, 1300, 1500]}
+    sizes={`(max-width: 640px) 640px, (max-width: 760px) 768px, (max-width: 1024px) 1024px, (max-width: 1300px) 1300px, (min-width: 1301px) 1500px`}
+    loading={"eager"}
     fetchpriority={"high"}
-    decoding="sync"
-    class="hero-image bg-gray-800 object-cover w-full"
+    decoding={"sync"}
+    class="hero-image bg-gray-800 shadow object-cover w-full"
   />
 </section>

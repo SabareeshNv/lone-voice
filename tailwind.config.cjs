@@ -10,14 +10,15 @@ module.exports = {
         sans: ["Alegreya Sans", ...defaultTheme.fontFamily.sans],
         serif: ["Alegreya", ...defaultTheme.fontFamily.serif],
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: "70ch",
             "blockquote p:first-of-type::before": false,
             "blockquote p:first-of-type::after": false,
           },
         },
-      },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
