@@ -15,10 +15,11 @@ const description = "Thoughts from my chaotic mind!";
 
 <BaseLayout {title} {description}>
   <main class="wrapper py-6">
-    <div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      <div class="sm:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-2 lg:gap-6">
+    <div class="side-grid">
+      <div class="responsive-grid">
         {filteredPosts.map((post) => <Card {post} />)}
       </div>
+      <div class="bg-yellow-100">Sidebar</div>
     </div>
   </main>
 </BaseLayout>

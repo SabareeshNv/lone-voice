@@ -15,10 +15,10 @@ const description = "Welcome to my humble blog";
 
 <BaseLayout {title} {description}>
   <main class="wrapper py-6">
-    <div class="responsive-grid">
+    <div class="side-grid">
       <div>
         {filteredPosts.slice(0, 1).map((post) => <FirstCard {post} />)}
-        <div class="mt-10 md:mt-12 lg:mt-16 grid xl:grid-cols-2 gap-6">
+        <div class="mt-10 md:mt-12 lg:mt-16 responsive-grid">
           {filteredPosts.slice(1).map((post) => <Card {post} />)}
         </div>
       </div>

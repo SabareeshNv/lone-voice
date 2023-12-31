@@ -19,16 +19,23 @@
     @apply list-outside pl-[revert] marker:text-[#44403c];
   }
 
-  .responsive-grid {
+  .side-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
   }
 
-  @media (min-width: 769px) {
-    .responsive-grid {
+  @media (min-width: 768px) {
+    .side-grid {
+      gap: 3rem;
       grid-template-columns: 2.5fr 1fr;
     }
+  }
+
+  .responsive-grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
 }
 

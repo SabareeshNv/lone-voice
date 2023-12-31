@@ -11,7 +11,7 @@ module.exports = {
         serif: ["Alegreya", ...defaultTheme.fontFamily.serif],
       },
       screens: {
-        sideby: "1100px",
+        cardsize: "600px",
       },
       typography: (theme) => ({
         DEFAULT: {
