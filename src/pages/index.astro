@@ -18,11 +18,13 @@ const description = "Welcome to my humble blog";
     <div class="side-grid">
       <div>
         {filteredPosts.slice(0, 1).map((post) => <FirstCard {post} />)}
-        <div class="mt-10 md:mt-12 lg:mt-16 responsive-grid">
+        <div
+          class="mt-10 md:mt-12 lg:mt-16 md:grid md:gap-6 lg:gap-8 md:grid-cols-2"
+        >
           {filteredPosts.slice(1).map((post) => <Card {post} />)}
         </div>
       </div>
-      <div class="bg-yellow-100">Sidebar</div>
+      <div class="bg-gray-100">Sidebar</div>
     </div>
   </main>
 </BaseLayout>

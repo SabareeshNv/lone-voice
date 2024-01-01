@@ -12,7 +12,7 @@
   }
 
   .typography {
-    @apply prose prose-lg md:prose-xl xl:prose-2xl prose-stone prose-headings:font-serif prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose prose-lg md:prose-xl xl:prose-2xl prose-stone prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
   }
 
   .typography :is(ol, ul) {
@@ -30,12 +30,6 @@
       gap: 3rem;
       grid-template-columns: 2.5fr 1fr;
     }
-  }
-
-  .responsive-grid {
-    display: grid;
-    gap: 2em;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
 }
 
@@ -80,7 +74,7 @@ body > footer {
 
 @media (min-width: 768px) {
   .hero-image {
-    filter: brightness(0.7);
+    filter: brightness(0.65);
     aspect-ratio: 16 / 9;
   }
 }

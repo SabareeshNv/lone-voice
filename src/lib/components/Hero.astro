@@ -9,7 +9,7 @@ const { title, pubDate, coverImage, coverAlt } = Astro.props;
   <div class="hero-head wrapper-small">
     <Date date={pubDate} class="date text-lg lg:text-2xl" />
     <h1
-      class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold my-4 md:mb-10"
+      class="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold my-4 md:mb-10"
     >
       {title}
     </h1>
@@ -17,8 +17,8 @@ const { title, pubDate, coverImage, coverAlt } = Astro.props;
   <Image
     src={coverImage}
     alt={coverAlt}
-    widths={[640, 768, 1024, 1300, 1500]}
-    sizes={`(max-width: 640px) 640px, (max-width: 760px) 768px, (max-width: 1024px) 1024px, (max-width: 1300px) 1300px, (min-width: 1301px) 1500px`}
+    widths={[350, 550, 1000, 1350]}
+    sizes={`(max-width: 500px) 350px, (max-width: 768px) 550px, (max-width: 1024px) 1000px, (min-width: 1024px) 1350px`}
     loading={"eager"}
     fetchpriority={"high"}
     decoding={"sync"}
