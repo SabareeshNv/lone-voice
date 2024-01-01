@@ -12,7 +12,7 @@
   }
 
   .typography {
-    @apply prose prose-lg md:prose-xl xl:prose-2xl prose-stone prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose prose-lg md:prose-xl lg:prose-2xl prose-stone prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
   }
 
   .typography :is(ol, ul) {
@@ -44,7 +44,7 @@ body > footer {
 }
 
 @media (min-width: 768px) {
-  section {
+  .hero-section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }

@@ -18,6 +18,25 @@ module.exports = {
             "blockquote p:first-of-type::after": false,
           },
         },
+        "2xl": {
+          css: {
+            h1: {
+              marginTop: "1.1em",
+              marginBottom: "0.45em",
+              fontSize: "2.1em",
+            },
+            h2: {
+              marginTop: "1.1em",
+              marginBottom: "0.45em",
+              fontSize: "1.9em",
+            },
+            h3: {
+              marginTop: "1.1em",
+              marginBottom: "0.45em",
+              fontSize: "1.7em",
+            },
+          },
+        },
       }),
     },
   },
