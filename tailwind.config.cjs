@@ -21,19 +21,16 @@ module.exports = {
         "2xl": {
           css: {
             h1: {
-              marginTop: "1.1em",
-              marginBottom: "0.45em",
-              fontSize: "2.1em",
+              marginBottom: "0.5em",
+              fontSize: "2em",
             },
             h2: {
-              marginTop: "1.1em",
-              marginBottom: "0.45em",
-              fontSize: "1.9em",
+              marginBottom: "0.5em",
+              marginTop: "1.33em",
+              fontSize: "1.8em",
             },
             h3: {
-              marginTop: "1.1em",
-              marginBottom: "0.45em",
-              fontSize: "1.7em",
+              marginBottom: "0.5em",
             },
           },
         },
