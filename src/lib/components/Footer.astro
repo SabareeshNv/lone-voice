@@ -1,14 +1,27 @@
 ---
 const footer = [
-  { text: "Blog", link: "/blog" },
-  { text: "About", link: "/about" },
-  { text: "Contact", link: "/contact" },
+  { text: "Privacy Policy", link: "/privacy-policy" },
+  { text: "Editorial Policy", link: "/editorial-policy" },
 ];
 ---
 
-<footer class="bg-black/90 text-gray-300 py-8 mt-6 lg:mt-8">
-  <div class="layout text-center">
-    <p>Copyright © 2024 | TheLoneVoice.in</p>
-    <p>All rights reserved.</p>
+<footer class="bg-black/90 py-6">
+  <div class="wrapper text-gray-200">
+    <div class="grid gap-4 md:grid-cols-3">
+      <ul class="md:col-span-2 flex gap-4 justify-center md:justify-normal">
+        {
+          footer.map((item) => (
+            <li class="">
+              <a href={item.link} class="text-lg lg:text-xl">
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="text-lg lg:text-xl text-center md:text-right">
+        Copyright © 2024 | TheLoneVoice.in
+      </div>
+    </div>
   </div>
 </footer>
