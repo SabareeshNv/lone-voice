@@ -12,7 +12,7 @@
   }
 
   .typography {
-    @apply prose prose-lg md:prose-xl lg:prose-2xl prose-stone prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-tight prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose prose-lg md:prose-xl text-gray-800 prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-[1.2rem] prose-blockquote:border-stone-600 prose-blockquote:bg-stone-100 prose-blockquote:px-10 prose-blockquote:py-2;
   }
 
   .typography :is(ol, ul) {
