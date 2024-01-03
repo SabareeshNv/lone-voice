@@ -2,13 +2,15 @@
 const footer = [
   { text: "Privacy Policy", link: "/privacy-policy" },
   { text: "Editorial Policy", link: "/editorial-policy" },
+  { text: "Sitemap", link: "/sitemap-index.xml" },
+  { text: "RSS", link: "/rss" },
 ];
 ---
 
-<footer class="bg-black/90 py-6">
-  <div class="wrapper text-gray-200">
-    <div class="grid gap-4 md:grid-cols-3">
-      <ul class="md:col-span-2 flex gap-4 justify-center md:justify-normal">
+<footer class="bg-black/90 py-6 lg:py-8 mt-6">
+  <div class="wrapper text-gray-100">
+    <div class="side-grid">
+      <ul class="flex gap-4 justify-center md:justify-normal">
         {
           footer.map((item) => (
             <li class="">

@@ -4,3 +4,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 const title = "About";
 const description = "Welcome to my humble blog";
 ---
+
+<BaseLayout {title} {description}>
+  <div class="typography mt-8 mx-auto">
+    <h1>{title}</h1>
+  </div>
+</BaseLayout>
